@@ -1,0 +1,11 @@
+Error: chaincode install failed with status: 500 - failed to invoke backing implementation of 'InstallChaincode': could not build chaincode: docker build failed: docker image build failed: docker build failed: Error returned from build: 1 "go: inconsistent vendoring in /chaincode/input/src:
+	github.com/hyperledger/fabric-chaincode-go@v0.0.0-20220720122508-9207360bbddd: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+	github.com/hyperledger/fabric-contract-api-go@v1.2.0: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+	github.com/hyperledger/fabric-protos-go@v0.0.0-20220613214546-bf864f01d75e: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+	github.com/stretchr/testify@v1.8.0: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+	google.golang.org/protobuf@v1.28.0: is explicitly required in go.mod, but not marked as explicit in vendor/modules.txt
+
+	To ignore the vendor directory, use -mod=readonly or -mod=mod.
+	To sync the vendor directory, run:
+		go mod vendor
+"
