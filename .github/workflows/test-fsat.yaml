@@ -6,8 +6,17 @@ on:
   pull_request:
     branches:
       - "main"
+<<<<<<< HEAD
     paths:
       - "full-stack-asset-transfer-guide/**"
+=======
+<<<<<<< HEAD
+    paths:
+      - "full-stack-asset-transfer-guide/**"
+=======
+      - "release-2.5"
+>>>>>>> origin/main
+>>>>>>> origin/master
 
 jobs:
   ansible:

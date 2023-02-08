@@ -32,8 +32,16 @@ trap exitHook SIGINT SIGTERM EXIT
 # 00-setup
 ###############################################################################
 
+<<<<<<< HEAD
 curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- binary
 
+=======
+<<<<<<< HEAD
+curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- binary
+
+=======
+>>>>>>> origin/main
+>>>>>>> origin/master
 export WORKSHOP_PATH="${PWD}"
 export PATH="${WORKSHOP_PATH}/bin:${PATH}"
 export FABRIC_CFG_PATH="${WORKSHOP_PATH}/config"
@@ -188,8 +196,18 @@ function build_cc() {
   CHAINCODE_IMAGE=$CONTAINER_REGISTRY/$CHAINCODE_NAME
 
   # Build the chaincode image
+<<<<<<< HEAD
   # TODO: configure buildx builders on the CI runners to ensure target arch and os are automatically set.
   docker build --build-arg TARGETARCH=amd64 -t $CHAINCODE_IMAGE contracts/$CHAINCODE_NAME-typescript
+=======
+<<<<<<< HEAD
+  # TODO: configure buildx builders on the CI runners to ensure target arch and os are automatically set.
+  docker build --build-arg TARGETARCH=amd64 -t $CHAINCODE_IMAGE contracts/$CHAINCODE_NAME-typescript
+=======
+  ARCH=$(uname -m | sed 's/x86_64/amd64/g' | sed 's/aarch64/arm64/g')
+  docker build --build-arg TARGETARCH=${ARCH} -t $CHAINCODE_IMAGE contracts/$CHAINCODE_NAME-typescript
+>>>>>>> origin/main
+>>>>>>> origin/master
 
   # Push the image to the insecure container registry
   docker push $CHAINCODE_IMAGE

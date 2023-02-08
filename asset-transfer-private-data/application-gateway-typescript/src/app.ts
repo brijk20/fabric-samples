@@ -129,6 +129,16 @@ async function main(): Promise<void> {
 
         // Delete AssetID2 as Org1.
         await deleteAsset(contractOrg1, assetID2);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+        // Trigger a purge of the private data for the asset
+        // The previous delete is optinal if purge is used
+        await purgeAsset(contractOrg1, assetID2);
+>>>>>>> origin/main
+>>>>>>> origin/master
     } finally {
         gatewayOrg1.close();
         clientOrg1.close();
@@ -261,6 +271,23 @@ async function deleteAsset(contract: Contract, assetID: string): Promise<void> {
 
     console.log('*** Transaction committed successfully');
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+async function purgeAsset(contract: Contract, assetID: string): Promise<void> {
+    console.log('\n--> Submit Transaction: PurgeAsset, ID:', assetID);
+    const dataForPurge = { assetID };
+    await contract.submit('PurgeAsset', {
+        transientData: { asset_purge: JSON.stringify(dataForPurge) },
+    });
+
+    console.log('*** Transaction committed successfully');
+}
+
+>>>>>>> origin/main
+>>>>>>> origin/master
 async function readAssetPrivateDetails(contract: Contract, assetID: string, collectionName: string): Promise<boolean> {
     console.log(`\n--> Evaluate Transaction: ReadAssetPrivateDetails from ${collectionName}, ID: ${assetID}`);
 

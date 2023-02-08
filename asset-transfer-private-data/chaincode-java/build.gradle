@@ -14,7 +14,15 @@ version '1.0-SNAPSHOT'
 
 dependencies {
     
+<<<<<<< HEAD
     implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.+'
+=======
+<<<<<<< HEAD
+    implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.+'
+=======
+    implementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.5.+'
+>>>>>>> origin/main
+>>>>>>> origin/master
     implementation 'org.json:json:+'
 
     testImplementation 'org.hyperledger.fabric-chaincode-java:fabric-chaincode-shim:2.+'

@@ -10,6 +10,18 @@ inputs:
   java-version:
     description: Version of JDK
     default: 11.x
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  fabric-version:
+    description: Version of Hyperledger Fabric
+    default: 2.5.0-alpha3
+  ca-version:
+    description: Version of Hyperledger Fabric CA
+    default: 1.5.6-beta3
+>>>>>>> origin/main
+>>>>>>> origin/master
 
 runs:
   using: "composite"
@@ -35,12 +47,31 @@ runs:
     - name: Install fabric CLI
       shell: bash
       run: |
+<<<<<<< HEAD
         curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- binary
+=======
+<<<<<<< HEAD
+        curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- binary
+=======
+        curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh \
+          | bash -s -- binary --fabric-version ${{ inputs.fabric-version }} --ca-version ${{ inputs.ca-version }}
+>>>>>>> origin/main
+>>>>>>> origin/master
         echo ${PWD}/bin >> $GITHUB_PATH
 
     - name: Pull Fabric Docker Images
       shell: bash
+<<<<<<< HEAD
       run: curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- docker
+=======
+<<<<<<< HEAD
+      run: curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh | bash -s -- docker
+=======
+      run: |
+        curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh \
+          | bash -s -- docker --fabric-version ${{ inputs.fabric-version }} --ca-version ${{ inputs.ca-version }}
+>>>>>>> origin/main
+>>>>>>> origin/master
 
     - name: Install retry CLI
       shell: bash

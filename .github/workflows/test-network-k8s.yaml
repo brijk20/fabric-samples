@@ -7,9 +7,21 @@ run-name: ${{ github.actor }} is testing the Kubernetes Test Network 🍒
 on:
   workflow_dispatch:
   push:
+<<<<<<< HEAD
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+=======
+<<<<<<< HEAD
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+=======
+    branches: [ "main", "release-2.5" ]
+  pull_request:
+    branches: [ "main", "release-2.5" ]
+>>>>>>> origin/main
+>>>>>>> origin/master
 
 jobs:
   ccaas-java:

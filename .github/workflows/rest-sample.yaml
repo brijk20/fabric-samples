@@ -10,10 +10,23 @@ env:
 on:
   workflow_dispatch:
   push:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
     branches: [ "main" ]
     paths: [ "asset-transfer-basic/rest-api-typescript/**" ]
   pull_request:
     branches: [ "main" ]
+<<<<<<< HEAD
+=======
+=======
+    branches: [ "main", "release-2.5" ]
+    paths: [ "asset-transfer-basic/rest-api-typescript/**" ]
+  pull_request:
+    branches: [ "main", "release-2.5" ]
+>>>>>>> origin/main
+>>>>>>> origin/master
     paths: [ "asset-transfer-basic/rest-api-typescript/**" ]
 
 jobs:

@@ -21,8 +21,19 @@
   "author": "Hyperledger",
   "license": "Apache-2.0",
   "dependencies": {
+<<<<<<< HEAD
     "fabric-contract-api": "^2.0.0",
     "fabric-shim": "^2.0.0"
+=======
+<<<<<<< HEAD
+    "fabric-contract-api": "^2.0.0",
+    "fabric-shim": "^2.0.0"
+=======
+    "@grpc/grpc-js": "1.8.1",
+    "fabric-contract-api": "~2.5.2",
+    "fabric-shim": "~2.5.2"
+>>>>>>> origin/main
+>>>>>>> origin/master
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
